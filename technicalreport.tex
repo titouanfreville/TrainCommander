@@ -5,41 +5,61 @@
 \title{Technical Report - Train Commander}
 \author{
   FREVILLE Titouan \\
-  PETRIGNET Julien
+  PETRIGNET Julien \\
+  \today
 }
 
 
 \begin{document}
 \maketitle
-
+\tableofcontents
 \begin{abstract}
 \end{abstract}
 
 \part{Software Solutions}
+  NodeJS or go Solution.
   \chapter{Engine core}
     \section{Provide information to the engine}
+      Call sncf api to provide real time data. If nodeJS solution: Ajax Call. If GO solution : go program.
     \section{Find way}
+      Process on the data collected in the api using Node or GO function. Function with 3 arguments (Departure, Arrival, Time zone).
     \section{Process reservation}
+      Call webview in AngularJS to fulfill the reservation form + make access to a virtual paypal payment.
     \section{Generate PDF bill and ticket}
+      Generate the pdf using node or go + send it.
   \chapter{Accounts}
+    need a DataBase to store the accompts. Should be a MariaDB or Mysql one (MariaDB is a Mysql "framework").
     \section{Create account}
       \subsection{From mail}
+	Classic register form catch by go or node and Process in the database
       \subsection{From Facebook}
+	Use Facebook connection api. Store information in the database.
       \subsection{From Google Account}
+	Use Google connection api. Store information in the database.
     \section {Review travel}
+      Standart call on the database using node or go to read the travel link to the accompt.
     \section{Replicate a previous travel}
+      Need to store an historic of the travel from a user in database. Standart call on it to Replicate the valid data.
     \section{Print tickets/receipts}
+      Call to the database to confirm he payed ... Standart call to node or go to launch print function (can be a pdf view printed from the navigator).
   \chapter{Access to all feature}
     \section{From website}
+      Easy :p Just think about making the reservation process a separate web view who wil be called by the web site.
     \section{From Mobile application}
+      Should provide a Android(JAVA) and IOS(Obj. C/swift) application. Think to use the web view for reservation (avoid replication in the work :) )
 \part{Supporting Architecture Solutions}
   \chapter{Virtualization}
     \section{Infra to power the app}
+      Server should be on a linux system Supporting Vagrant. Call Vagrant to up the virtual machine. The VM should run on coreOS using dockers.
     \section{2 sites}
+      Make sure to be able to copy states when the main is forced down.
   \chapter{Cluster}
     \section{Engine}
+      Using docker + coreOS + Vagrant as system to run the app, we just have to manage the Cluster in the vagrantfile.
     \section{Web}
+      Using docker + coreOS + Vagrant as system to run the app, we just have to manage the Cluster in the vagrantfile.
   \chapter{Web CDN}
     \section{Always pass by CDN}
+     Need to find a CDN solution.
     \section{Load balancing}
-\end{document}          
+\end{document}
