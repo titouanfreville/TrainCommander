@@ -12,7 +12,7 @@ Final group project for 3d year supinfo's students, year 2015-2016.
 - install ansible if you want to deploy it on your server or environement
 - run : `ansible-playbook -i "localhost," -c local dev_deploy.yml` for a local deployment.
 
-### Makefile
+### Makefile (Ubuntu or apt-get based distributions)
 - run `make install_dev`
 
 ### Your self
