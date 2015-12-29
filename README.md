@@ -42,3 +42,7 @@ Dev :)
 Please update this doc to add the doc for the feature you worked on, so evry one can understang what you done, how and how to make it run.
 
 #Feature Work
+## Observations and link
+- The rules to observe for the website : https://kinsta.com/learn/page-speed/
+- Some help to test optimisation : https://kinsta.com/blog/best-free-website-performance-testing-tools/
+## Basic diagramme(?)
