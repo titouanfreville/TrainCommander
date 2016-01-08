@@ -49,7 +49,7 @@ Please update this doc to add the doc for the feature you worked on, so evry one
 
 # Usefull Links 
 ## CSS, SASS, COMPASS
-- http://css3gen.com/css3-animation/ : Generate css animations.
+- http://www.hongkiat.com/blog/css3-animation-tools/ : 10 nice tools for CSS (don't use JavaScript for evrything :p )
 - http://compass-style.org/ : compass documentaion.
 - https://css-tricks.com/snippets/css/a-guide-to-flexbox/ : Flexbox guide.
 - https://github.com/titouanfreville/web_site/tree/master/theatre/stylesheets/scss : exemple of compass+sass/scss design.
