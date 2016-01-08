@@ -49,6 +49,7 @@ Please update this doc to add the doc for the feature you worked on, so evry one
 
 # Usefull Links 
 ## CSS, SASS, COMPASS
+- http://tympanus.net/codrops/ : css ressources
 - http://www.hongkiat.com/blog/css3-animation-tools/ : 10 nice tools for CSS (don't use JavaScript for evrything :p )
 - http://compass-style.org/ : compass documentaion.
 - https://css-tricks.com/snippets/css/a-guide-to-flexbox/ : Flexbox guide.
