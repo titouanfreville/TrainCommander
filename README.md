@@ -46,3 +46,26 @@ Please update this doc to add the doc for the feature you worked on, so evry one
 - The rules to observe for the website : https://kinsta.com/learn/page-speed/
 - Some help to test optimisation : https://kinsta.com/blog/best-free-website-performance-testing-tools/
 ## Basic diagramme(?)
+
+# Usefull Links 
+## CSS, SASS, COMPASS
+- http://css3gen.com/css3-animation/ : Generate css animations.
+- http://compass-style.org/ : compass documentaion.
+- https://css-tricks.com/snippets/css/a-guide-to-flexbox/ : Flexbox guide.
+- https://github.com/titouanfreville/web_site/tree/master/theatre/stylesheets/scss : exemple of compass+sass/scss design.
+
+## Docker
+- https://docs.docker.com/mac/ : get started 
+- https://docs.docker.com/ : full documentation
+- https://hub.docker.com/ : find images and push yours.
+
+## Nodejs and frameworks
+- http://sailsjs.org/ : Sails js (home page)
+- http://sailsjs.org/get-started : Sails - get started
+- http://sailsjs.org/documentation/concepts/ : Sails full doc
+- https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md : gulp full doc
+- http://gulpjs.com/ : gulp presentation
+- https://facebook.github.io/react/ : react js homepage
+- https://facebook.github.io/react/docs/getting-started.html : reactjs full doc
+- https://angularjs.org/ : AngularJS home page
+- https://docs.angularjs.org/guide : AngularJS documentation
