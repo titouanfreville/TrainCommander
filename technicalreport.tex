@@ -4,9 +4,8 @@
 % Title Page
 \title{Technical Report - Train Commander}
 \author{
-  FREVILLE Titouan \\
-  PETRIGNET Julien \\
-  \today
+  FREVILLE Titouan (Lead Dev) \\
+  PETRIGNET Julien (SysAdmin)
 }
 
 
@@ -17,16 +16,17 @@
 \end{abstract}
 
 \part{Software Solutions}
-  NodeJS or go Solution.
+  NodeJS based solution (using AngularJS + gulp + SailsJS (?) )
   \chapter{Engine core}
     \section{Provide information to the engine}
-      Call sncf api to provide real time data. If nodeJS solution: Ajax Call. If GO solution : go program.
+      Call sncf api to provide real time data.
     \section{Find way}
       Process on the data collected in the api using Node or GO function. Function with 3 arguments (Departure, Arrival, Time zone).
     \section{Process reservation}
       Call webview in AngularJS to fulfill the reservation form + make access to a virtual paypal payment.
     \section{Generate PDF bill and ticket}
       Generate the pdf using node or go + send it.
+      
   \chapter{Accounts}
     need a DataBase to store the accompts. Should be a MariaDB or Mysql one (MariaDB is a Mysql "framework").
     \section{Create account}
