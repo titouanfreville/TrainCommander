@@ -16,9 +16,15 @@ Final group project for 3d year supinfo's students, year 2015-2016.
 - run `make install_dev`
 
 ### Your self
-- install node, docker, gem
-- `npm install`
-- `gem install compass --pre` (to check)
+-  `sudo apt-get install nodejs npm gem gem-dev`
+-	`sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D`
+-	`sudo echo "deb https://apt.dockerproject.org/repo ubuntu-precise main\ndeb https://apt.dockerproject.org/repo ubuntu-trusty main\ndeb https://apt.dockerproject.org/repo ubuntu-vivid main\ndeb https://apt.dockerproject.org/repo ubuntu-wily main\n" >> /etc/apt/sources.list.d/docker.list`
+-	`sudo apt-get update`
+-	`sudo apt-get install docker-engine`
+-	`sudo usermod -aG docker $(USER)`
+-	`sudo gem install --verbose compass --pre`
+-	`npm install`
+
 
 Dev :)
 
@@ -36,3 +42,31 @@ Dev :)
 Please update this doc to add the doc for the feature you worked on, so evry one can understang what you done, how and how to make it run.
 
 #Feature Work
+## Observations and link
+- The rules to observe for the website : https://kinsta.com/learn/page-speed/
+- Some help to test optimisation : https://kinsta.com/blog/best-free-website-performance-testing-tools/
+## Basic diagramme(?)
+
+# Usefull Links 
+## CSS, SASS, COMPASS
+- http://tympanus.net/codrops/ : css ressources
+- http://www.hongkiat.com/blog/css3-animation-tools/ : 10 nice tools for CSS (don't use JavaScript for evrything :p )
+- http://compass-style.org/ : compass documentaion.
+- https://css-tricks.com/snippets/css/a-guide-to-flexbox/ : Flexbox guide.
+- https://github.com/titouanfreville/web_site/tree/master/theatre/stylesheets/scss : exemple of compass+sass/scss design.
+
+## Docker
+- https://docs.docker.com/mac/ : get started 
+- https://docs.docker.com/ : full documentation
+- https://hub.docker.com/ : find images and push yours.
+
+## Nodejs and frameworks
+- http://sailsjs.org/ : Sails js (home page)
+- http://sailsjs.org/get-started : Sails - get started
+- http://sailsjs.org/documentation/concepts/ : Sails full doc
+- https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md : gulp full doc
+- http://gulpjs.com/ : gulp presentation
+- https://facebook.github.io/react/ : react js homepage
+- https://facebook.github.io/react/docs/getting-started.html : reactjs full doc
+- https://angularjs.org/ : AngularJS home page
+- https://docs.angularjs.org/guide : AngularJS documentation
