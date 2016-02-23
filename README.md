@@ -1,8 +1,6 @@
 # Train Commander
 Final group project for 3d year supinfo's students, year 2015-2016.
 
-TESTING
-
 # Dev Notice
 ## Get ready to dev ? 
  `git clone https://github.com/titouanfreville/TrainCommander.git`
