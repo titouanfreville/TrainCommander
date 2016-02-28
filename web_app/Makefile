@@ -75,28 +75,17 @@ default: start_dev
 
 dev: build up
 
-start_dev: require rsync quick_conf dev
+start_dev: test_require dev
 
-dev_update: update rsync dev
+dev_update: update dev
 # ------------------------------------------------------------------------------
 # Install part -----------------------------------------------------------------
 test_require:
 	./test_require.sh $(RSYNC_NAME)
 
-require: test_require
-	./require.sh $(NAME)
-
 quick_conf:
 	./quick_conf.sh
 
-rsync:
-	mkdir -p $(RSYNC_REPO)
-	./rsync.sh $(RSYNC_NAME) $(RSYNC_REPO) $(PWD)
-
-update:
-	cd dev && git pull
-	sudo composer self-update
-	cd dev && composer update
 # ------------------------------------------------------------------------------
 # Docker compose tasks ---------------------------------------------------------
 build:
@@ -142,32 +131,11 @@ rm:
 rmi:
 	@-docker rmi $(IM)
 # ------------------------------------------------------------------------------
-# Test part --------------------------------------------------------------------
-test_build:
-	docker build -t nexway-phpunit .
-
-phpunit:
-	docker run --rm -v $(DEV_CODE):/home/httpd/softgallery -v $(PWD)/logs:/home/httpd/softgallery/logs nexway-phpunit $(TEST_VAR)
-
-test: test_build phpunit
-# ------------------------------------------------------------------------------
 # Clean Part -------------------------------------------------------------------
-clean_rsync:
-	@-rm -rf $(RSYN_REPO)
 
 clean_docker: clean_vfs stop rm rmi
 
-# Delete dev
-clean_build:
-	@-sudo rm -rf dev
-
-clean_logs:
-	@-echo -n "" > rsync.logs
-	@-echo -n "" > rsync_errors.logs
-	@-echo -n "" > logs/phpunit_errors.logs
-
-clean: clean_build clean_logs clean_docker
-	# docker rm $(docker ps -q -f status=exited)
+clean: clean_docker
 
 distclean:
 	docker images  --no-trunc | grep 'none' | awk '{print $3}' | xargs -r docker rmi

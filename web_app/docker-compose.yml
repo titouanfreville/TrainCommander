@@ -1,0 +1,6 @@
+web_app:
+  node:
+    build: .
+    container_name: npm_install
+    volumes:
+      $PWD:/home/TrainCommander
