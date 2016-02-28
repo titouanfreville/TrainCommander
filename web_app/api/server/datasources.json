@@ -1,0 +1,14 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "MainDatasource": {
+    "host": "localhost",
+    "database": "TrainCommanderApi",
+    "password": "AdminTrainCommanderAPI125*",
+    "name": "MainDatasource",
+    "user": "Admin",
+    "connector": "mysql"
+  }
+}
