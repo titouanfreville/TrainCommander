@@ -6,10 +6,11 @@
   "TrainCommander": {
     "host": "91.134.209.177",
     "port": 0,
+    "url": "",
     "database": "TrainCommanderApi",
-    "password": "TrainCommanderAPI125*",
+    "password": "admin",
     "name": "TrainCommander",
     "connector": "mysql",
-    "user": "root"
+    "user": "admin"
   }
 }
