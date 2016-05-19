@@ -1,7 +1,16 @@
-FROM debian:jessie
+FROM node:argon
 
-RUN apt-get update -q && apt-get install --no-install-recommends -qyyy git npm
+RUN mkdir -p /hom/traincommander/api
 
-RUN /usr/bin/update-alternatives --install /usr/bin/node node /usr/bin/nodejs 60
+WORKDIR /home/traincommander/api
 
-CMD ["npm", "install"]
+RUN npm install -g strongloop
+
+COPY api/package.json /home/traincommander/api
+RUN npm install
+
+COPY api /home/traincommander/api
+
+EXPOSE 4000 3000
+
+CMD slc run

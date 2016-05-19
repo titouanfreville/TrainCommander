@@ -3,12 +3,13 @@
     "name": "db",
     "connector": "memory"
   },
-  "MainDatasource": {
-    "host": "localhost",
+  "TrainCommander": {
+    "host": "91.134.209.177",
+    "port": 0,
     "database": "TrainCommanderApi",
-    "password": "AdminTrainCommanderAPI125*",
-    "name": "MainDatasource",
-    "user": "Admin",
-    "connector": "mysql"
+    "password": "TrainCommanderAPI125*",
+    "name": "TrainCommander",
+    "connector": "mysql",
+    "user": "root"
   }
 }

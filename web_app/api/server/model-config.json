@@ -33,25 +33,27 @@
     "public": false
   },
   "Cart": {
-    "dataSource": "MainDatasource",
-    "public": true,
-    "$promise": {},
-    "$resolved": true
+    "dataSource": "TrainCommander",
+    "public": true
+  },
+  "DbUser": {
+    "dataSource": "TrainCommander",
+    "public": true
+  },
+  "History": {
+    "dataSource": "TrainCommander",
+    "public": true
   },
   "Schedule": {
-    "dataSource": "MainDatasource",
-    "public": true,
-    "$promise": {},
-    "$resolved": true
+    "dataSource": "TrainCommander",
+    "public": true
   },
   "Station": {
-    "dataSource": "MainDatasource",
-    "public": true,
-    "$promise": {},
-    "$resolved": true
+    "dataSource": "TrainCommander",
+    "public": true
   },
   "Trips": {
-    "dataSource": "MainDatasource",
+    "dataSource": "TrainCommander",
     "public": true
   }
 }
