@@ -14,7 +14,7 @@
     ]
   },
   "User": {
-    "dataSource": "db"4
+    "dataSource": "db"
   },
   "AccessToken": {
     "dataSource": "db",

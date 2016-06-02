@@ -1,0 +1,46 @@
+server {
+  listen  80;
+  server_name reservetontrain;
+  access_log /var/log/rtt.troll/nginx.access.log;
+  error_log  /var/log/rtt.troll/nginx.error.log;
+  root /home/rtt/;
+  charset utf-8;
+  index index.html index.htm;
+
+  location / {
+    rewrite ^ https://$host$request_uri? permanent;
+  }
+
+  location ~ ^/(scripts.*js|styles|images) {
+    gzip_static on;
+    expires 1y;
+    add_header Cache-Control public;
+    break;
+  }
+}
+
+# server {
+#   listen        443 ssl;
+#   server_name  example.com;
+#   access_log  /var/log/example.com/nginx.access.log;
+#   error_log   /var/log/example.com/nginx.error.log;
+#   ssl_certificate       /etc/nginx/ssl/example.com.pem;
+#   ssl_certificate_key   /etc/nginx/ssl/example.com.key;
+
+#   keepalive_timeout 5;
+#   root /var/www/apps/example.com/dist;
+#   charset utf-8;
+
+#   location ~ ^/(scripts.*js|styles|images) {
+#     gzip_static on;
+#     expires 1y;
+#     add_header Cache-Control public;
+#     add_header ETag "";
+
+#     break;
+#   }
+
+#   location / {
+#     try_files $uri /index.html;
+#   }
+# }

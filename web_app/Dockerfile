@@ -1,16 +1,8 @@
-FROM node:argon
+FROM nginx
 
-RUN mkdir -p /hom/traincommander/api
+RUN mkdir -p var/log/rtt.troll/ && echo "" > var/log/rtt.troll/nginx.access.log && echo "" > /var/log/rtt.troll/nginx.error.log
+RUN rm /etc/nginx/conf.d/default.conf
+ADD config /etc/nginx/conf.d/default.conf
+ADD hosts /etc/hosts
 
-WORKDIR /home/traincommander/api
-
-RUN npm install -g strongloop
-
-COPY api/package.json /home/traincommander/api
-RUN npm install
-
-COPY api /home/traincommander/api
-
-EXPOSE 4000 3000
-
-CMD slc run
+ADD index.html /home/rtt/
