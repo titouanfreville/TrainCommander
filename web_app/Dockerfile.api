@@ -1,6 +1,6 @@
 FROM node:argon
 
-RUN mkdir -p /hom/traincommander/api
+RUN mkdir -p /home/traincommander/api
 
 WORKDIR /home/traincommander/api
 
@@ -10,7 +10,8 @@ COPY api/package.json /home/traincommander/api
 RUN npm install
 
 COPY api /home/traincommander/api
+ADD cmd_api.sh /bin/cmd_api
 
 EXPOSE 4000 3000
 
-CMD slc run
+CMD cmd_api

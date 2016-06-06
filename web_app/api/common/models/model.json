@@ -3,5 +3,10 @@
   "principalType": "ROLE",
   "principalId": "admin",
   "permission": "ALLOW",
-  "property": "find"
+  "property": "find",
+  "properties": {},
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
 }
