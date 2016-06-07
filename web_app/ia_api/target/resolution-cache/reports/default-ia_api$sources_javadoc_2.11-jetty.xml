@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="default"
+		module="ia_api$sources_javadoc_2.11"
+		revision="1.0"
+		conf="jetty"
+		confs="compile, runtime, test, provided, optional, container, jetty, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
+		date="20160606235153"/>
+	<dependencies>
+		<module organisation="org.eclipse.jetty" name="jetty-runner">
+			<revision name="9.2.1.v20140609" status="release" pubdate="20140609224100" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.eclipse.org/jetty" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="0">
+				<metadata-artifact status="no" details="" size="14531" time="0" location="/Users/titouanfreville/.ivy2/cache/org.eclipse.jetty/jetty-runner/ivy-9.2.1.v20140609.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/eclipse/jetty/jetty-runner/9.2.1.v20140609/jetty-runner-9.2.1.v20140609.pom"/>
+				<caller organisation="default" name="ia_api$sources_javadoc_2.11" conf="jetty" rev="9.2.1.v20140609" rev-constraint-default="9.2.1.v20140609" rev-constraint-dynamic="9.2.1.v20140609" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="jetty-runner" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="7384" time="0" location="/Users/titouanfreville/.ivy2/cache/org.eclipse.jetty/jetty-runner/srcs/jetty-runner-9.2.1.v20140609-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/eclipse/jetty/jetty-runner/9.2.1.v20140609/jetty-runner-9.2.1.v20140609-sources.jar"/>
+					</artifact>
+					<artifact name="jetty-runner" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="48213" time="0" location="/Users/titouanfreville/.ivy2/cache/org.eclipse.jetty/jetty-runner/docs/jetty-runner-9.2.1.v20140609-javadoc.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/eclipse/jetty/jetty-runner/9.2.1.v20140609/jetty-runner-9.2.1.v20140609-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>

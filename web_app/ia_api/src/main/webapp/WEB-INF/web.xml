@@ -1,0 +1,13 @@
+<web-app>
+
+    <servlet>
+        <servlet-name>gets</servlet-name>
+        <servlet-class>servlet.Gets</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>gets</servlet-name>
+        <url-pattern>/get/*</url-pattern>
+    </servlet-mapping>
+
+</web-app>

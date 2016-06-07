@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="default"
+		module="ia_api_2.11"
+		revision="1.0"
+		conf="provided"
+		confs="compile, runtime, test, provided, optional, container, jetty, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
+		date="20160606235012"/>
+	<dependencies>
+		<module organisation="javax.servlet" name="javax.servlet-api">
+			<revision name="3.0.1" status="release" pubdate="20110712214052" resolver="jcenter" artresolver="jcenter" homepage="http://servlet-spec.java.net" downloaded="true" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="0">
+				<license name="CDDL + GPLv2 with classpath exception" url="https://glassfish.dev.java.net/nonav/public/CDDL+GPL.html"/>
+				<metadata-artifact status="successful" details="" size="12633" time="157" location="/Users/titouanfreville/.ivy2/cache/javax.servlet/javax.servlet-api/ivy-3.0.1.xml" searched="true" original-local-location="/Users/titouanfreville/.ivy2/cache/javax.servlet/javax.servlet-api/ivy-3.0.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1.pom"/>
+				<caller organisation="default" name="ia_api_2.11" conf="provided" rev="3.0.1" rev-constraint-default="3.0.1" rev-constraint-dynamic="3.0.1" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="javax.servlet-api" type="jar" ext="jar" status="successful" details="" size="85353" time="168" location="/Users/titouanfreville/.ivy2/cache/javax.servlet/javax.servlet-api/jars/javax.servlet-api-3.0.1.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>
