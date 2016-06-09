@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width' />
+    <title>Dockerfile Generator</title>
+    <link rel='icon' href='favicon.ico' />
+    <link rel='icon' type='image/gif' href='cactusgreen.gif' />
+    <!-- loading CSS -->
+    <link href='./style/stylesheets/style.css' rel='stylesheet'>
+    <link rel="stylesheet" href="bower_components/split-pane/split-pane.css" />
+    <!-- loading JS -->
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/split-pane/split-pane.js"></script>
+    <script src=../"bower_components/angular-split-pane/angular-split-pane.js"></script>
+    <script src="../scripts/main.js"></script>
+    <style type="text/css">
+      html, body {
+          /* The split-pane needs a container with width and height. */
+          height: 100%;
+          min-height: 100%;
+          margin: 0;
+          padding: 0;
+      }
+      /* The styling below is very simple. You can style things your own way. */
+      body {
+          box-sizing: border-box;
+          background: #aaa;
+          padding: 5px;
+      }
+      .split-pane-divider {
+          background: #aaa;
+      }
+      .split-pane-component {
+          background: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Dockerfile Generator</h1>
+      <h2>Make you life easier, generate your Docker's</h2>
+    </header>
+    <div>
+      <input type="text" ng-model="yourName" placeholder="Enter a name here">
+      <h1>Hello, {{ yourName }}!</h1>
+    </div>
+    <split-pane-component width="20em">
+    <form name="base" novalidate>
+      <!-- From clause : Which image:tag are you basing your docker on -->
+      <!-- TO DO : update label using http://hub.docker.com/v2/search/repositories/?query=iname&is_official=1t -->
+      <!-- TO DO : add use the prec request to make a select ;) -->
+      <label>
+        Which image do you want to be base on ?
+        <input type="text" name="from" list="from_list">
+        <datalist id="from_list">
+          <option value="ubuntu" />
+          <option value="debian" />
+          <option value="php" />
+          <option value="node" />
+        </datalist>
+      </label>
+      <div id = "login" ng-controller="LoginController" ui-view>
+      <!-- <form> -->
+      <label id="mailArea">
+        <span>e-mail</span>
+        <input id="UserMail" ng-model="email" type="text" >
+        <span>userMail = {{ email }</span>
+      </label>
+      <label id="PwdArea">
+        <span>Password</span>
+        <input id="UserPwd" ng-model="password" type="text" >
+      <pre>userPassword = {{ password }}</pre>
+      </label>
+      <input type="submit" value="Valider" />
+      <pre>master = {{ master }}</pre>
+      <!-- </form> -->
+    </div>
+
+      <label>
+        Do you want to install some packages ?
+        <input type="checkbox" name="need_package" value="yes" />
+        Yes
+        <div class="npt">
+          What package do you want to install ? (Be carefull about the os you are basing your image from)
+          <input type="text" name="package_list" placeholder="figlet cowsay" />
+        </div>
+      </label>
+
+      <label >
+
+      </label>
+
+    </form>
+  </body>
+</html>

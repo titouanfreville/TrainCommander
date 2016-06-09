@@ -4,7 +4,7 @@
     "connector": "memory"
   },
   "TrainCommander": {
-    "host": "DB_HOST",
+    "host": "91.134.249.72",
     "port": 0,
     "url": "",
     "database": "TrainCommanderApi",

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$//ia_api.iml" filepath="$PROJECT_DIR$//ia_api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java_ia_app.iml" filepath="$PROJECT_DIR$/java_ia_app.iml" />
     </modules>
   </component>
 </project>

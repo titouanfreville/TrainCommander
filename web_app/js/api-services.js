@@ -3,7 +3,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' && module.ex
   // Export the *name* of this Angular module
   // Sample usage:
   //
-  //   import apiServices from './api-ervices';
+  //   import apiServices from './api-services';
   //   angular.module('app', [apiServices]);
   //
   module.exports = "apiServices";

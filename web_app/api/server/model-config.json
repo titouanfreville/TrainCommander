@@ -44,15 +44,15 @@
     "dataSource": "TrainCommander",
     "public": true
   },
-  "Schedule": {
-    "dataSource": "TrainCommander",
-    "public": true
-  },
   "Station": {
     "dataSource": "TrainCommander",
     "public": true
   },
   "Trips": {
+    "dataSource": "TrainCommander",
+    "public": true
+  },
+  "Schedule": {
     "dataSource": "TrainCommander",
     "public": true
   }

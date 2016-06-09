@@ -43,6 +43,23 @@
       },
       "_selectable": false
     },
+    "price": {
+      "type": "String",
+      "required": true,
+      "length": null,
+      "precision": 5,
+      "scale": 2,
+      "mysql": {
+        "columnName": "price",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 5,
+        "dataScale": 2,
+        "nullable": "Y"
+      },
+      "_selectable": true,
+      "comments": "Enter the price as string (xxx.xx)"
+    },
     "dtime": {
       "type": "Date",
       "required": true,

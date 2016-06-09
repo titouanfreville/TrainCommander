@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$//ia_api.iml" filepath="$PROJECT_DIR$//ia_api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test_ia_api_renew.iml" filepath="$PROJECT_DIR$/test_ia_api_renew.iml" />
     </modules>
   </component>
 </project>
