@@ -26,14 +26,13 @@ import org.json.JSONObject;
 //Sets the path to base URL + /hello
 @Path("/getshortest")
 public class GetShortest {
-   /* @Path("{dep}/{arr}")*/
+    @Path("{dep}/{arr}")
     @GET
     @Produces("application/json")
-    /*@PathParam("dep") String dep, @PathParam("arr") String arr*/
-    public Response getTrips() throws JSONException {
-        JSONObject jsonr = new JSONObject();
+    public Response getTrips(@PathParam("dep") String dep, @PathParam("arr") String arr) throws JSONException {
+        JSONObject jsonr;
         Ia ia = new Ia("http://51.255.1.76:3000/api/");
-       // jsonr=ia.map_to_json(ia.getshortesttrips(dep,arr));
-        return Response.status(200).entity("Je suis la"+jsonr).build();
+        jsonr=ia.map_to_json(ia.getshortesttrips(dep,arr));
+        return Response.status(200).entity(jsonr).build();
     }
 }
