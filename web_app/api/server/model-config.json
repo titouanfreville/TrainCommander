@@ -32,11 +32,11 @@
     "dataSource": "db",
     "public": false
   },
-  "Cart": {
+  "DbUser": {
     "dataSource": "TrainCommander",
     "public": true
   },
-  "DbUser": {
+  "Cart": {
     "dataSource": "TrainCommander",
     "public": true
   },

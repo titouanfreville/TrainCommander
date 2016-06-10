@@ -45,7 +45,7 @@
     },
     "price": {
       "type": "String",
-      "required": true,
+      "required": false,
       "length": null,
       "precision": 5,
       "scale": 2,
@@ -57,35 +57,82 @@
         "dataScale": 2,
         "nullable": "Y"
       },
-      "_selectable": true,
-      "comments": "Enter the price as string (xxx.xx)"
+      "_selectable": true
     },
-    "dtime": {
-      "type": "Date",
+    "duration": {
+      "type": "String",
       "required": true,
-      "length": null,
+      "length": 7,
       "precision": null,
       "scale": null,
       "mysql": {
-        "columnName": "DTime",
-        "dataType": "date",
-        "dataLength": null,
+        "columnName": "Duration",
+        "dataType": "varchar",
+        "dataLength": 7,
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "N"
       },
       "_selectable": false
     },
-    "atime": {
-      "type": "Date",
+    "dhour": {
+      "type": "String",
       "required": true,
-      "length": null,
+      "length": 5,
       "precision": null,
       "scale": null,
       "mysql": {
-        "columnName": "ATime",
-        "dataType": "date",
-        "dataLength": null,
+        "columnName": "DHour",
+        "dataType": "varchar",
+        "dataLength": 5,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      },
+      "_selectable": false
+    },
+    "ddate": {
+      "type": "String",
+      "required": true,
+      "length": 10,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "DDate",
+        "dataType": "varchar",
+        "dataLength": 10,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      },
+      "_selectable": false
+    },
+    "ahour": {
+      "type": "String",
+      "required": true,
+      "length": 5,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "AHour",
+        "dataType": "varchar",
+        "dataLength": 5,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      },
+      "_selectable": false
+    },
+    "adate": {
+      "type": "String",
+      "required": true,
+      "length": 10,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "ADate",
+        "dataType": "varchar",
+        "dataLength": 10,
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "N"

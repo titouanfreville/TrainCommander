@@ -3,25 +3,25 @@
 -- Model: New Model    Version: 1.0
 -- MySQL Workbench Forward Engineering
 
-SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
-SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+-- SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+-- SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+-- SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 -- -----------------------------------------------------
 -- Schema TrainCommanderApi
 -- -----------------------------------------------------
 -- API database. Will not store user here ;)
--- 
-DROP SCHEMA IF EXISTS `TrainCommanderApi` ;
+--
+-- DROP SCHEMA IF EXISTS `TrainCommanderApi` ;
 
 -- -----------------------------------------------------
 -- Schema TrainCommanderApi
 --
 -- API database. Will not store user here ;)
--- 
+--
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `TrainCommanderApi` DEFAULT CHARACTER SET utf8 ;
-USE `TrainCommanderApi` ;
+-- CREATE SCHEMA IF NOT EXISTS `TrainCommanderApi` DEFAULT CHARACTER SET utf8 ;
+-- USE `TrainCommanderApi` ;
 
 -- -----------------------------------------------------
 -- Table `TrainCommanderApi`.`Station`
@@ -51,8 +51,6 @@ CREATE TABLE IF NOT EXISTS `TrainCommanderApi`.`Trips` (
   `IntermediateD` INT UNSIGNED NULL,
   PRIMARY KEY (`idTrips`),
   UNIQUE INDEX `itTrips_UNIQUE` (`idTrips` ASC),
-  UNIQUE INDEX `Departure_UNIQUE` (`Departure` ASC),
-  UNIQUE INDEX `Arrival_UNIQUE` (`Arrival` ASC),
   UNIQUE INDEX `IntermediateA_UNIQUE` (`IntermediateA` ASC),
   UNIQUE INDEX `IntermediateB_UNIQUE` (`IntermediateB` ASC),
   UNIQUE INDEX `IntermediateC_UNIQUE` (`IntermediateC` ASC),
@@ -98,16 +96,18 @@ COMMENT = 'This table refer trips details (Start, Intermediate, Arrival)';
 CREATE TABLE IF NOT EXISTS `TrainCommanderApi`.`Schedule` (
   `idSchedule` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `Trip` INT UNSIGNED NOT NULL,
-  `DTime` DATE NOT NULL,
-  `ATime` DATE NOT NULL,
+  `Duration` VARCHAR(7) NOT NULL,
+  `DHour` VARCHAR(5) NOT NULL,
+  `DDate` VARCHAR(10) NOT NULL,
+  `AHour` VARCHAR(5) NOT NULL,
+  `ADate` VARCHAR(10) NOT NULL,
   `IATime` DATE NULL,
   `IBTime` DATE NULL,
   `ICTime` DATE NULL,
   `IDTime` DATE NULL,
   PRIMARY KEY (`idSchedule`),
   UNIQUE INDEX `idSchedule_UNIQUE` (`idSchedule` ASC),
-  UNIQUE INDEX `Trip_UNIQUE` (`Trip` ASC),
-  INDEX `Time` (`Trip` ASC, `DTime` ASC, `ATime` ASC)  COMMENT 'Quick Find Trip D&&A date',
+  INDEX `Time` (`Trip` ASC, `DHour` ASC, `DDate` ASC, `AHour` ASC, `ADate` ASC)  COMMENT 'Quick Find Trip D&&A date',
   CONSTRAINT `fk_Schedule_Trip`
     FOREIGN KEY (`Trip`)
     REFERENCES `TrainCommanderApi`.`Trips` (`idTrips`)
@@ -127,7 +127,6 @@ CREATE TABLE IF NOT EXISTS `TrainCommanderApi`.`Cart` (
   `Schedule_ref` INT UNSIGNED NOT NULL,
   PRIMARY KEY (`idCart`),
   UNIQUE INDEX `idCart_UNIQUE` (`idCart` ASC),
-  UNIQUE INDEX `Trip_UNIQUE` (`Trip` ASC),
   UNIQUE INDEX `Quantity_UNIQUE` (`Quantity` ASC),
   UNIQUE INDEX `Schedule_ref_UNIQUE` (`Schedule_ref` ASC),
   CONSTRAINT `fk_Cart_Trip`
@@ -146,7 +145,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `TrainCommanderApi`.`Db_user`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `TrainCommanderApi`.`Db_user` (
+/* CREATE TABLE IF NOT EXISTS `TrainCommanderApi`.`Db_user` (
   `idUser` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `Email` VARCHAR(45) NOT NULL COMMENT 'used as login',
   `Password` VARCHAR(45) NOT NULL COMMENT 'Store encrypted password as STRING',
@@ -160,7 +159,7 @@ CREATE TABLE IF NOT EXISTS `TrainCommanderApi`.`Db_user` (
   PRIMARY KEY (`idUser`),
   UNIQUE INDEX `idUser_UNIQUE` (`idUser` ASC),
   UNIQUE INDEX `email_UNIQUE` (`Email` ASC))
-ENGINE = InnoDB;
+ENGINE = InnoDB;*/
 
 
 -- -----------------------------------------------------
@@ -173,7 +172,6 @@ CREATE TABLE IF NOT EXISTS `TrainCommanderApi`.`History` (
   `store_date` DATE NOT NULL COMMENT 'Store date of trip in history',
   PRIMARY KEY (`idHistory`),
   UNIQUE INDEX `idHistory_UNIQUE` (`idHistory` ASC),
-  UNIQUE INDEX `ref_iduser_UNIQUE` (`ref_iduser` ASC),
   UNIQUE INDEX `ref_cart_UNIQUE` (`ref_shedule` ASC),
   CONSTRAINT `fk_History_user`
     FOREIGN KEY (`ref_iduser`)
@@ -187,14 +185,14 @@ CREATE TABLE IF NOT EXISTS `TrainCommanderApi`.`History` (
     ON UPDATE CASCADE)
 ENGINE = InnoDB
 COMMENT = 'Store history of trips associated to a user (only availble ones)';
-
+/*
 CREATE USER 'searcher' IDENTIFIED BY 'imasearcher';
 
 GRANT SELECT ON TABLE `TrainCommanderApi`.* TO 'searcher';
 CREATE USER 'Admin' IDENTIFIED BY 'TrainCommanderAPI125*';
 
 GRANT ALL ON `TrainCommanderApi`.* TO 'Admin';
-
-SET SQL_MODE=@OLD_SQL_MODE;
+*/
+/*SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
-SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;*/

@@ -22,25 +22,24 @@ public class CallApi {
     public byte[] getApiInfo(String surl)
     {
         HttpURLConnection connection = null;
-        byte[] reader = new byte[1000];
+
+        System.out.print("Je suis une url de java <==>" + surl+  "\n");
+        byte[] reader = new byte[2000];
         //Create connection
         URL url = null;
         try {
             url = new URL(surl);
         } catch (MalformedURLException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         try {
             connection = (HttpURLConnection)url.openConnection();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         try {
             connection.setRequestMethod("GET");
         } catch (ProtocolException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         connection.setRequestProperty("Content-Type",
@@ -54,19 +53,16 @@ public class CallApi {
             wr = new DataInputStream (
                     connection.getInputStream());
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         try {
-            wr.read(reader, 0, 1000);
+            wr.read(reader, 0, 2000);
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         try {
             wr.close();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         return reader;
@@ -112,22 +108,33 @@ public class CallApi {
                         i = getOut(p.getValue(), reader);
                         break;
                     }
-                    int tmp = p.getValue() + 2;
+                    int tmp = p.getValue()+1;
+                    if ((char)reader[tmp] == ':') {
+                        tmp ++;
+                    }
+                    if ((char)reader[tmp] == '\"') {
+                        tmp ++;
+                    }
                     String regex1 = "intermediate(.*)";
                     String regex2 = "i(.*)time";
                     if ((key.matches(regex1) || key.matches(regex2)) && ((char)reader[tmp]=='n')) {
                         i = getOut(p.getValue(), reader)-1;
                         break;
                     }
-                    if ((char)reader[tmp] == '\"') {
-                        tmp ++;
+                    if ((char)reader[tmp+1] == '}') {
+                        String tc = "";
+                        tc=tc+(char)reader[tmp];
+                        tmap.put(key, tc);
+                        ltree.add(tmap);
+                        i=tmp;
+                        break;
                     }
                     p = byte_to_string(reader, tmp);
                     String value = p.getKey();
                     tmap.put(key, value);
                     i = p.getValue();
                     if ((char)reader[i] == '\"') {
-                        tmp ++;
+                        i ++;
                     }
                     break;
                 default:

@@ -81,18 +81,18 @@ public class Ia {
      * @return JSONObject corresponding to Map
      * @throws JSONException if problems occurs ^^
      */
-    public JSONObject map_to_json(TreeMap<Integer,ArrayList<Integer>> map) throws JSONException {
-        JSONObject res = new JSONObject();
-        JSONArray array;
+    public JSONArray map_to_json(TreeMap<Integer,ArrayList<Integer>> map) throws JSONException {
+        JSONArray res = new JSONArray();
+        JSONObject object;
         ArrayList<Integer> tmp;
         for (int i=0; i<8; i++)  {
             if (map.get(i) != null) {
-                array=new JSONArray();
+                object=new JSONObject();
                 tmp=map.get(i);
-                for (int j=0; j<tmp.size(); j++) {
-                    array.put(tmp.get(j));
-                }
-                res.put(Integer.toString(i),array);
+                System.out.print("tmp : " + tmp + " --------------------- \n");
+                object.put("weight",Integer.toString(i));
+                object.put("list",tmp);
+                res.put(object);
             }
         }
         return res;
@@ -126,23 +126,20 @@ public class Ia {
         }
         for (i=0; i < idlists.size(); i++) {
             tmp=searchers.get_map_from_ints(ltrips, idlists.get(i), "idtrips");
-            if (pds == tmp.size()- 3) {
-                intlist.add(idlists.get(i));
-            }
-            else {
-                pds=tmp.size()-3;
+            if (pds != tmp.size()- 3) {
                 res.put(pds, intlist);
+                pds=tmp.size()-3;
                 intlist = new ArrayList<Integer>();
-                intlist.add(idlists.get(i));
             }
-            System.out.print("End of loop step " + i + " -- intlist : " + intlist + " --- tmp : "+ tmp +"  ---- ");
+            intlist.add(idlists.get(i));
         }
-
-        pds=tmp.size()-1;
-        res.put(pds, intlist);
-        intlist = new ArrayList<Integer>();
-        intlist.add(idlists.get(i));
-
+        if (tmp != null) {
+            pds=tmp.size()-3;
+            res.put(pds, intlist);
+            intlist = new ArrayList<Integer>();
+            intlist.add(idlists.get(i-1));
+        }
+        
         return res;
     }
 
