@@ -31,7 +31,7 @@ var urlBaseHost = getHost(urlBase) || location.host;
  * the models exposed by the LoopBack server via the REST API.
  *
  */
-var module = angular.module("apiServices", ['ngResource']);
+var module = angular.module("apiServices", ["ngResource"]);
 
 /**
  * @ngdoc object

@@ -18,7 +18,7 @@
 'use strict';
 /* jshint -W097 */
 
- angular.module('rtt', [])
+ angular.module('rtt', ["apiServices"])
 .controller('ExampleController', ['$scope', function($scope) {
   $scope.list = [];
   $scope.text = 'hello';
