@@ -140,5 +140,11 @@ h5 {
 }
 .mail {
   text-align: center;
-      vertical-align: middle;
+  vertical-align: middle;
+}
+h6 {
+   text-align: center;
+  vertical-align: middle;
+}
+  
 }
