@@ -139,7 +139,7 @@ public class Ia {
             intlist = new ArrayList<Integer>();
             intlist.add(idlists.get(i-1));
         }
-        
+
         return res;
     }
 

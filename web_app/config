@@ -1,46 +1,43 @@
 server {
-  listen  80;
-  server_name reservetontrain;
-  access_log /var/log/rtt.troll/nginx.access.log;
-  error_log  /var/log/rtt.troll/nginx.error.log;
-  root /home/rtt/;
-  charset utf-8;
-  index index.html index.htm;
+    listen       80;
+    server_name  localhost;
+    root   /home/rtt;
+    #charset koi8-r;
+    #access_log  /var/log/nginx/log/host.access.log  main;
 
-  location / {
-    rewrite ^ https://$host$request_uri? permanent;
-  }
+    location / {
+        index  index.html index.htm;
+    }
 
-  location ~ ^/(scripts.*js|styles|images) {
-    gzip_static on;
-    expires 1y;
-    add_header Cache-Control public;
-    break;
-  }
+    #error_page  404              /404.html;
+
+    # redirect server error pages to the static page /50x.html
+    #
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   /usr/share/nginx/html;
+    }
+
+    # proxy the PHP scripts to Apache listening on 127.0.0.1:80
+    #
+    #location ~ \.php$ {
+    #    proxy_pass   http://127.0.0.1;
+    #}
+
+    # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+    #
+    #location ~ \.php$ {
+    #    root           html;
+    #    fastcgi_pass   127.0.0.1:9000;
+    #    fastcgi_index  index.php;
+    #    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;
+    #    include        fastcgi_params;
+    #}
+
+    # deny access to .htaccess files, if Apache's document root
+    # concurs with nginx's one
+    #
+    #location ~ /\.ht {
+    #    deny  all;
+    #}
 }
-
-# server {
-#   listen        443 ssl;
-#   server_name  example.com;
-#   access_log  /var/log/example.com/nginx.access.log;
-#   error_log   /var/log/example.com/nginx.error.log;
-#   ssl_certificate       /etc/nginx/ssl/example.com.pem;
-#   ssl_certificate_key   /etc/nginx/ssl/example.com.key;
-
-#   keepalive_timeout 5;
-#   root /var/www/apps/example.com/dist;
-#   charset utf-8;
-
-#   location ~ ^/(scripts.*js|styles|images) {
-#     gzip_static on;
-#     expires 1y;
-#     add_header Cache-Control public;
-#     add_header ETag "";
-
-#     break;
-#   }
-
-#   location / {
-#     try_files $uri /index.html;
-#   }
-# }

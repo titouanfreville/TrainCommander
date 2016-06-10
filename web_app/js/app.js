@@ -16,12 +16,13 @@
 /*jshint -W097 */
 var $rtt = angular.module('rtt', [
   // Angular/Libraries
-  'ngTouch', 'ui.router', 'gettext',
+  // 'ngTouch', 'ui.router', 'gettext',
   // Iab Modules/Controllers
-  'rtt.payment', 'rtt.address', 'rtt.service',
-  'rtt.controller', 'rtt.tracking', 'rtt.config'
+  'rtt.logincontroller',
+  /*'rtt.address', 'rtt.service',
+  'rtt.controller', 'rtt.tracking', 'rtt.config'*/
 ])
-
+/*
 .config(function ($stateProvider, $urlRouterProvider, settings) {
 
   // IAB uses AngularUI Router which uses the concept of states
@@ -91,7 +92,7 @@ var $rtt = angular.module('rtt', [
   // if none of the above states are matched, use index as fallback
   $urlRouterProvider.otherwise('/');
 })
-
+*/
 /**
  * @ngdoc directive
  * @name iab.directive.next
