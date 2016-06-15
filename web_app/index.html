@@ -1,24 +1,150 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title>Rail Commander :: INDEX</title>
-  </head>
-  <body>
-    <header>
-      <div class="logo"></div>
-      <div class="htitle">
-        <h1>
-          Welcomme to Rail Commander
-        </h1>
-        <h2>
-          Thurther, Faster
-        </h2>
-      </div>
-    </header>
-    <main>
-      {{}}
-    </main>
-  </body>
-</html>
+<html lang="fr">
+<head>
+     <title>ReserveTonTrain</title>
+     <meta name="description" content="Bienvenue sur le site de réservation en ligne de votre train">
+     <meta name="keywords" content="ReserveTonTrain, Reserver train, Billet train">
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" type="text/css" href="./style/RTT.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="" target="RTT">
+                        <img alt="logo-RTT" class="img-responsive" src="style/images/logoo.png" width="1096" height="1015">
+                    </a>
+                </div>
+                <div class="col-sm-9 col-md-8">
+                    <nav class="navbar navbar-default" role="navigation">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav navbar-left">
+                                    <li role="presentation"><a href="index.html">Accueil</a></li>
+                                    <li role="presentation"><a href="reservation.html">Réservez vos billets</a></li>
+                                    <li role="presentation"><a href="tarif.html">Tarifs</a></li>
+                                    <li role="presentation"><a href="contact.html">A propos</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="navbar-wrapper">
+            <div class="presentation">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="media-heading">Reserve Ton Train</h1>
+                            <div class="space">
+                                <div>Simplifiez-vous la vie et réservez votre train sur ReserveTonTrain</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="titre">
+         <div class="row">
+            <div class="col-xs-6 col-md-4">
+                <div class="middle">
+                    <img class="center-block" src="style/images/profil.png" alt="Profil" height="95">
+                </div>
+                <h4>Profil </h4>
+                <q><a href="profil.html">Accèder à votre profil utilisateur</a></q>
+            </div>
+            <div class="col-xs-6 col-md-4">
+                <div class="img-palmares">
+                    <img class="center-block" src="style/images/shop.png" alt="Shop" height="95">
+                </div>
+                <h4>Acheter vos billets</h4>
+                <q><a href="reservation.html">Accèder aux réservations</a></q>
+            </div>
+            <div class="col-xs-6 col-md-4">
+                <div class="img-palmares">
+                    <img class="center-block" src="style/images/parchemin.png" alt="Aide" height="95">
+                </div>
+                <h4>Historique</h4>
+                <q><a href="historique.html">Accèder à vos historiques</a></q>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul class="navig-footer">
+                    <li><h5>PLAN DU SITE</h5></li>
+                    <li><a href="reservation.html" aria-controls="ceremonie" role="tab" data-toggle="tab">Reservation de billet</a></li>
+                    <li><a href="tarif.html" aria-controls="ceremonie" role="tab" data-toggle="tab">Tarif</a></li>
+                    <li><a href="contact.html" aria-controls="ceremonie" role="tab" data-toggle="tab">A propos</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <ul>
+                    <li><h5>INFORMATIONS</h5></li>
+                    <li><a target="blank" href="contact.html">Nous contacter</a></li>
+                    <li><a target="blank" href="mentions.html">Règlement</a></li>
+                    <li>
+                        <a href="mentions.html" data-toggle="modal" data-target="#legalTerms">Mentions légales</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <ul>
+                    <li><h5>A PROPOS DE</h5></li>
+                    <li><a target="blank" href="reservation.html">RéserveTonTrain</a></li>
+                    <li><a target="blank" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+               <ul>
+                    <li><h5>En partenariat avec :</h5></li>
+                    <li>
+                        <a target="blank" href="https://www.supinfo.com/fr/"><img src="style/images/supinfoo.png" alt="Supinfo" width="194" height="80" /></a>
+                    </li>
+                </ul>
+           </div>
+       </div>
+       <div class="row">
+        <div class="col-md-12">
+            <div class="footerSocialLinks">
+                <span class="facebookButton">
+                    <div id="fb-root"></div><script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1"; fjs.parentNode.insertBefore(js, fjs); }(document, "script", "facebook-jssdk"));</script><div class="fb-share-button" data-href="" data-send="" data-layout="button_count" data-width="300" data-show-faces="1" data-share="1"></div>
+                </span>
+                <span class="googleplus">
+                    <div class="g-plusone" data-size="medium" data-annotation="bubble" data-width="60" data-href="http://www.leprixdesinvestisseurs.fr"></div><script type="text/javascript"> window.___gcfg = {lang: "fr"}; (function() { var po = document.createElement("script"); po.type = "text/javascript"; po.async = true; po.src = "https://apis.google.com/js/plusone.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(po, s); })();      </script>
+                </span>
+                <span class="twitterButton"><a href="https://twitter.com/share" class="twitter-share-button" data-text="" data-url="" data-lang="fr" data-via="" data-hashtags="" ></a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </span>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="copyright">
+            2016 &reg; Reserve Ton Train - Tous droits r&eacute;serv&eacute;s - <a href="#legalTerms" data-toggle="modal" data-target="#legalTerms">Mentions légales</a>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</body>

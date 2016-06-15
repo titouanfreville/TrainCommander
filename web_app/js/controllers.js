@@ -26,6 +26,7 @@
     if ($scope.text) {
       $scope.list.push(this.text);
       $scope.text = '';
+      console.log(dbUser.find());
     }
   };
 }]);
