@@ -45,9 +45,11 @@ public class testMain {
         Ia ia = new Ia("http://51.255.235.183:3000/api/");
         System.out.print("\n Map res shortest : " + ia.getshortesttrips("PalombieForest", "BatCave") +"\n");
 
+        //
+
         JSONArray jsonr;
         ia = new Ia("http://51.255.235.183:3000/api/");
-        TreeMap<Integer, ArrayList<Integer>> test = ia.getshortesttrips("BatCave", "BatCave");
+        TreeMap<Integer, ArrayList<Integer>> test = ia.getshortesttrips("PalombieForest", "LaCiteDesSonges");
         System.out.print("\n Map res shortest test : " + test +"\n");
         jsonr=ia.map_to_json(test);
         System.out.print("JSONR : " + jsonr +"\n");

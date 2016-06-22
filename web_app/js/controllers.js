@@ -18,15 +18,34 @@
 'use strict';
 /* jshint -W097 */
 
- angular.module('rtt', ["apiServices"])
-.controller('ExampleController', ['$scope', function($scope) {
-  $scope.list = [];
-  $scope.text = 'hello';
+var $module = angular.module('rtt', ["apiServices", "ngCookies"]);
+$module.controller('LoginController', ['$scope', '$window', '$cookies', 'DbUser', function($scope, $window , $cookies, DbUser) {
+  // $scope.list = [];
+  // $scope.text = 'hello';
+  $scope.mail = "marsu@pilami.palombia";
+  $scope.password = "HoubaBahou";
+  var user;
   $scope.submit = function() {
-    if ($scope.text) {
-      $scope.list.push(this.text);
-      $scope.text = '';
-      console.log(dbUser.find());
+    if ($scope.mail && $scope.password) {
+      
+      DbUser.findOne(
+        {filter: 
+          {
+            where: {email: $scope.mail} 
+          } 
+        }).$promise.then(function(results) {
+          user = results.toJSON();
+        });
+      if ($scope.password == user.password) {
+        $cookies.put('user', user.id);
+        $window.location.href = '/index.html';
+      }
+    }
+    else {
+      $window.alert("Email ou Passowrd non renseigner. Merci de remplir ces champs afin de pouvoir accéder à votre espace.")
     }
   };
 }]);
+$module.controller('test',[], function($scope) {
+
+})

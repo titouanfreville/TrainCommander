@@ -28,6 +28,36 @@ public class Ia {
     private ArrayList<TreeMap<String, String>> lschedules;
 
     /**
+     * Private method in : Search if element is in list
+     * @param e int to search
+     * @param l list of integer
+     * @return true if e in list, false else
+     */
+    private boolean in(Integer e, ArrayList<Integer> l) {
+        for (int i=0; i<l.size();i++) {
+            if (l.get(i) == e) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Private cleaner : Remove duplicates element from list
+     * @param l list to clean
+     * @return list without duplicates
+     */
+    private ArrayList<Integer> remove_duplicates(ArrayList<Integer> l) {
+        ArrayList<Integer> res = new ArrayList<Integer>();
+        for (int i=0; i< l.size(); i++) {
+            if (!(in(l.get(i), res))) {
+                res.add(l.get(i));
+            }
+        }
+        return res;
+    }
+
+    /**
      *Constructor : init the ArrayLists
      * @param ibase_url String containing the base url to use
      */
@@ -91,7 +121,7 @@ public class Ia {
                 tmp=map.get(i);
                 System.out.print("tmp : " + tmp + " --------------------- \n");
                 object.put("weight",Integer.toString(i));
-                object.put("list",tmp);
+                object.put("list",remove_duplicates(tmp));
                 res.put(object);
             }
         }
@@ -117,6 +147,7 @@ public class Ia {
             return null;
         }
         ArrayList<Integer> idlists = searchers.get_ids_from_ints(ltrips,idepart, iarival, "idtrips", "departure", "arrival");
+        System.out.print("\n ------ ID LISTS "+idlists+" -------------------- \n");
         // -------------------------------------------------------------------------------------------------------------
         // Operations --------------------------------------------------------------------------------------------------
         if (idlists.size()==1) {
@@ -134,12 +165,11 @@ public class Ia {
             intlist.add(idlists.get(i));
         }
         if (tmp != null) {
-            pds=tmp.size()-3;
+            pds = tmp.size()-3;
             res.put(pds, intlist);
             intlist = new ArrayList<Integer>();
             intlist.add(idlists.get(i-1));
         }
-
         return res;
     }
 

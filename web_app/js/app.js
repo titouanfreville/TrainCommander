@@ -14,13 +14,14 @@
 /* jshint +W097 */
 'use strict';
 /*jshint -W097 */
+/*
 var $rtt = angular.module('rtt', [
   // Angular/Libraries
   // 'ngTouch', 'ui.router', 'gettext',
   // Iab Modules/Controllers
   'rtt.logincontroller',
   /*'rtt.address', 'rtt.service',
-  'rtt.controller', 'rtt.tracking', 'rtt.config'*/
+  'rtt.controller', 'rtt.tracking', 'rtt.config'
 ])
 /*
 .config(function ($stateProvider, $urlRouterProvider, settings) {
