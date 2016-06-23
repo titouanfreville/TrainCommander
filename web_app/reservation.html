@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
- <title>ReserveTonTrain</title>
- <meta name="description" content="Bienvenue sur le site de réservation en ligne de votre train">
- <meta name="keywords" content="ReserveTonTrain, Reserver train, Billet train">
- <meta charset="utf-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
- <link rel="stylesheet" type="text/css" href="style/RTT.css">
-
-
+  <title>ReserveTonTrain</title>
+  <meta name="description" content="Bienvenue sur le site de réservation en ligne de votre train">
+  <meta name="keywords" content="ReserveTonTrain, Reserver train, Billet train">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style/RTT.css">
+  <!-- loading Angular Modules -->
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="../bower_components/angular-resource/angular-resource.js"></script>
+  <script src="../bower_components/angular-cookies/angular-cookies.js"></script>
+  <!-- <script src="../js/app.js" /> -->
+  <script src="../js/api-services.js"></script>
+  <script src="../js/iapi-services.js"></script>
+  <script src="../js/controllers.js"></script>
 </head>
-<body>
-
-
+<body ng-app="rtt">
 
 <!-- Flooteur Top -->
-
     <div class="header">
         <div class="container">
             <div class="row">
@@ -47,49 +50,41 @@
                                     <li role="presentation"><a href="contact.html">A propos</a></li>
 
 
-         <!-- DEBUT DU LOGIN --> 
+                                    <!-- DEBUT DU LOGIN -->
+                         <li class="dropdown">
+                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b><span class="caret"></span></a>
+                         <ul id="login-dp" class="dropdown-menu">
+                         <li>
+                           <div class="row">
+                             <div class="col-md-12">
+                               <div>S'enregistrer avec</div>
+                                 <div class="social-buttons">
+                                 <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+                                 <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
+                                 </div>
+                               <div>ou</div>
+                               <form class="form" ng-submit="submit()" ng-controller="LoginController" accept-charset="UTF-8" id="login-nav">
+                                 <label class="form-group">
+                                   <span class="sr-only">E-mail</span>
+                                   <input type="email" ng-model="mail" class="form-control" name="mail" placeholder="Adresse E-mail" required />
+                                 </label>
+                                 <label class="form-group">
+                                   <span class="sr-only">Mot de passe</span>
+                                   <input type="password" ng-model="password" class="form-control" name="password" placeholder="Le mot de passe ?" required />
+                                 </label>
+                                 <input type="submit" id="submit" value="Submit" />
+                                 </form>
+                               </form>
+                             </div>
+                             <div class="bottom text-center">Vous êtes nouveau ? <a href="#"><b>Rejoignez-nous</b></a>
+                             </div>
+                           </div>
+                         </li>
+                         </ul>
+                         </li>
 
-                                    <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b><span class="caret"></span></a>
-                                    <ul id="login-dp" class="dropdown-menu">
-                                        <li>
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <div>S'enregistrer avec</div>
-                                                        <div class="social-buttons">
-                                                            <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
-                                                            <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
-                                                        </div>
-                                                        <div>ou</div>
-                                                        <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-                                                            <div class="form-group">
-                                                                <label class="sr-only" for="exampleInputEmail2">Adresse E-mail</label>
-                                                                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Adresse E-mail" required>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label class="sr-only" for="exampleInputPassword2">Mot de passe</label>
-                                                                <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Mot de passe" required>
-                                                            <div class="help-block text-right"><a href="">Mot de passe oublié ?</a></div>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <button type="submit" class="btn btn-primary btn-block">S'enregistrer</button>
-                                                            </div>
-                                                            <div class="checkbox">
-                                                                <label>
-                                                                    <input type="checkbox"> Rester connecté
-                                                                </label>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                <div class="bottom text-center">Vous êtes nouveau ? <a href="#"><b>Rejoignez-nous</b></a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    </li>
+                         <!-- FIN LOGIN -->
 
-                                    <!-- FIN LOGIN -->
-                                    
                                 </ul>
                             </div>
                         </div>
@@ -98,14 +93,33 @@
             </div>
         </div>
     </div>
-    
-    <div class='container'>
 
+    <div class='container' ng-controller="ReservationFormController">
+      <!-- Ticket reservation form :) -->
+      <form class="form" ng-submit="submit()" accept-charset="UTF-8" id="login-nav">
+        <label class="form-group">
+          <span>Gare de départ</span>
+          <select ng-model="departure" class="form-control" name="departure" ng-options="s.name for s in slist" required>
+          </select>
+        </label>
+
+        <label class="form-group">
+          <span>Gare d'arrivée</span>
+          <select ng-model="arrival" class="form-control" name="arrival" ng-options="s.name for s in slist" required>
+          </select>
+        </label>
+
+        <label class="form-group">
+          <span >Date de départ</span>
+          <input type="date" ng-model="date" class="form-control" name="date" value="{{ date | date:'medium' }}"  />
+        </label>
+
+        <input type="submit" id="submit" value="Submit" />
+      </form>
+    </div>
 
 
 <!-- Flooteur bas -->
-       
-</div>
 <div class="footer">
     <div class="container">
         <div class="row">
@@ -139,7 +153,7 @@
                     </li>
                 </ul>
            </div>
-       </div>  
+       </div>
 
 
 

@@ -1113,8 +1113,7 @@ module.factory(
         /**
          * @ngdoc method
          * @name apiServices.DbUser#update
-         * @methodOf apiServices.DbUser
-         *
+    $scope.slist = S
          * @description
          *
          * Update instances of the model matched by where from the data source.

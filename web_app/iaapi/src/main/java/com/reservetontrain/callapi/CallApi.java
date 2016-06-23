@@ -24,7 +24,7 @@ public class CallApi {
         HttpURLConnection connection = null;
 
         System.out.print("Je suis une url de java <==>" + surl+  "\n");
-        byte[] reader = new byte[2000];
+        byte[] reader = new byte[3000];
         //Create connection
         URL url = null;
         try {
@@ -56,7 +56,7 @@ public class CallApi {
             e.printStackTrace();
         }
         try {
-            wr.read(reader, 0, 2000);
+            wr.read(reader, 0, 3000);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -69,12 +69,22 @@ public class CallApi {
     }
 
     public Pair<String, Integer> byte_to_string (byte[] tb, int s) {
+
+        System.out.print("NEW BTS ------------------------ " + "\n");
+        System.out.print("Entry char : " + (char)tb[s-1]  + " Entry int :"+ s +"\n");
         int i = s;
         String res = "";
+        System.out.print("TABLE *------* \n "+ tb + "\n FIN TABLE -------- ****** \n");
         char c = (char)tb[i];
+        System.out.println("\n --- " + tb.length +"---\n");
         while (i < tb.length && c != '\"' && c != ',') {
             res = res + c;
-            i++; c=(char)(tb[i]);
+            i++;
+            if (i < tb.length) {
+                c=(char)(tb[i]);
+            }
+            /*System.out.print("tb|i] "+ tb[i] + ' ' + (char)tb[i] + "\n");
+            System.out.print("Boucle char at  "+ i + ' ' + c + "\n");*/
         }
         return new Pair(res,i);
     }
@@ -133,12 +143,18 @@ public class CallApi {
                     String value = p.getKey();
                     tmap.put(key, value);
                     i = p.getValue();
+                    if (i== reader.length){
+                        break;
+                    }
                     if ((char)reader[i] == '\"') {
                         i ++;
                     }
                     break;
                 default:
                     break;
+            }
+            if (i== reader.length){
+                break;
             }
             i++;
             c = (char)reader[i];
