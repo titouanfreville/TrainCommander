@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "TrainCommander": {
+    "host": "DB_HOST",
+    "port": 0,
+    "url": "",
+    "database": "TrainCommanderApi",
+    "password": "admin",
+    "name": "TrainCommander",
+    "connector": "mysql",
+    "user": "admin"
+  }
+}

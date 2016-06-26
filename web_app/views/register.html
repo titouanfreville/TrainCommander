@@ -1,0 +1,51 @@
+<!--
+* Register View
+*
+* Mean to be call when a new user is created
+* @author Titouan FREVILLE <titouanfreville@hotmail.fr>
+* @author Robin PIREZ <mail@smth.com>
+-->
+
+<div id = "Register" ng-controller="" ui-view>
+  <form ng-submit="(submitted=true && submit()">
+	<label id="RegisterUserNameArea">
+		<span>Prénom</span>
+		<input id="RegisterUserName" type="text" name="Form" />
+	</label>
+	<label id="RegisterUserLastNameArea">
+		<span>Nom</span>
+		<input id="RegisterUserLastName" type="text" name="Form" />
+	</label>
+	<label id="RegisterMailArea">
+		<span>e-mail</span>
+		<input id="RegisterUserMail" type="text" name="Form" />
+	</label>
+	<label id="RegisterPwdArea">
+		<span>Password</span>
+		<input id="RegisterUserPwd" type="text" name="Form" />
+	</label>
+	<label id="RegisterAgeArea">
+		<span>Date de naissance</span>
+		<input id="RegisterAge" type="text" name="Form" />
+	</label>
+	<label id="RegisterPhoneArea">
+		<span>Téléphone</span>
+		<input id="RegisterUserPhone" type="text" name="Form" />
+	</label>
+	<label id="RegisterAddrArea">
+		<span>Adresse</span>
+		<input id="RegisterAddr" type="text" name="Form" />
+	</label>
+	<label id="RegisterCityArea">
+		<span>Ville</span>
+		<input id="RegisterCity" type="text" name="Form" />
+	</label>
+	<label id="RegisterCountryArea">
+		<span>Pays</span>
+		<input id="RegisterCountry" type="text" name="Form" />
+	</label>
+	<input type="submit" value="Valider" />
+  </form>
+</div>
+
+

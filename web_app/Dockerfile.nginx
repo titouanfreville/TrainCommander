@@ -1,0 +1,7 @@
+FROM nginx:stable
+
+RUN mkdir -p var/log/rtt.troll/ && echo "" > var/log/rtt.troll/nginx.access.log && echo "" > /var/log/rtt.troll/nginx.error.log
+ADD config /etc/nginx/conf.d/default.conf
+ADD hosts /etc/hosts
+
+ADD . home/rtt/

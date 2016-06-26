@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="75cm" height="43cm" viewBox="1 31 1496 860" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="2" y="32" width="200" height="38"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2" y="32" width="200" height="38"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="102" y="54.9">
+      <tspan x="102" y="54.9">TO DO</tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="259" y1="39" x2="260" y2="889"/>
+  <g>
+    <rect style="fill: #ffffff" x="300" y="32" width="239" height="38"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="300" y="32" width="239" height="38"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="419.5" y="54.9">
+      <tspan x="419.5" y="54.9">IN PROGRESS</tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="581" y1="36" x2="578" y2="887"/>
+  <g>
+    <rect style="fill: #ffffff" x="617" y="36" width="244" height="38"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="617" y="36" width="244" height="38"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="739" y="58.9">
+      <tspan x="739" y="58.9">CODE REVIEW</tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="900" y1="41" x2="898" y2="875"/>
+  <g>
+    <rect style="fill: #ffffff" x="960" y="33" width="203" height="38"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="960" y="33" width="203" height="38"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="1061.5" y="55.9">
+      <tspan x="1061.5" y="55.9">DONE (merged in main)</tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="1228" y1="41" x2="1228" y2="874"/>
+  <g>
+    <rect style="fill: #ffffff" x="1252" y="32" width="224" height="38"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1252" y="32" width="224" height="38"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="1364" y="54.9">
+      <tspan x="1364" y="54.9">MERGED IN MASTER</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="16.825" y="90.5" width="191.35" height="102"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="16.825" y="90.5" width="191.35" height="102"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="112.5" y="113.4">
+      <tspan x="112.5" y="113.4">EX-01 : </tspan>
+      <tspan x="112.5" y="129.4">Faire des tâches exemples</tspan>
+      <tspan x="112.5" y="145.4">pour le board ;)</tspan>
+      <tspan x="112.5" y="161.4"></tspan>
+      <tspan x="112.5" y="177.4">ASSIGNIEE : &lt;&gt;</tspan>
+    </text>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="112.5" y="141.5">
+    <tspan x="112.5" y="141.5"></tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="327.9" y="97.7" width="191.35" height="102"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="327.9" y="97.7" width="191.35" height="102"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="423.575" y="120.6">
+      <tspan x="423.575" y="120.6">EX-01 : </tspan>
+      <tspan x="423.575" y="136.6">Faire des tâches exemples</tspan>
+      <tspan x="423.575" y="152.6">pour le board ;)</tspan>
+      <tspan x="423.575" y="168.6"></tspan>
+      <tspan x="423.575" y="184.6">ASSIGNIEE : &lt;Max&gt;</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="651.8" y="94.4" width="191.35" height="102"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="651.8" y="94.4" width="191.35" height="102"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="747.475" y="117.3">
+      <tspan x="747.475" y="117.3">EX-01 : </tspan>
+      <tspan x="747.475" y="133.3">Faire des tâches exemples</tspan>
+      <tspan x="747.475" y="149.3">pour le board ;)</tspan>
+      <tspan x="747.475" y="165.3"></tspan>
+      <tspan x="747.475" y="181.3">ASSIGNIEE : &lt;Tit&gt;</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="963.7" y="89.1" width="191.35" height="102"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="963.7" y="89.1" width="191.35" height="102"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="1059.38" y="112">
+      <tspan x="1059.38" y="112">EX-01 : </tspan>
+      <tspan x="1059.38" y="128">Faire des tâches exemples</tspan>
+      <tspan x="1059.38" y="144">pour le board ;)</tspan>
+      <tspan x="1059.38" y="160"></tspan>
+      <tspan x="1059.38" y="176">ASSIGNIEE : &lt;&gt;</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="1275.6" y="82.8" width="191.35" height="102"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1275.6" y="82.8" width="191.35" height="102"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="1371.28" y="105.7">
+      <tspan x="1371.28" y="105.7">EX-01 : </tspan>
+      <tspan x="1371.28" y="121.7">Faire des tâches exemples</tspan>
+      <tspan x="1371.28" y="137.7">pour le board ;)</tspan>
+      <tspan x="1371.28" y="153.7"></tspan>
+      <tspan x="1371.28" y="169.7">ASSIGNIEE : &lt;&gt;</tspan>
+    </text>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="423.575" y="148.7">
+    <tspan x="423.575" y="148.7"></tspan>
+  </text>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="13" y1="221" x2="1494" y2="221"/>
+  <g>
+    <rect style="fill: #ffffff" x="15" y="231" width="1481" height="39"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="15" y="231" width="1481" height="39"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="755.5" y="254.4">
+      <tspan x="755.5" y="254.4">HOW TO PROCESS IN BOARD :</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="5.175" y="281.5" width="247.65" height="134"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="5.175" y="281.5" width="247.65" height="134"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="129" y="304.4">
+      <tspan x="129" y="304.4">STEP 1 : CREATE THE TASK</tspan>
+      <tspan x="129" y="320.4">(Task must be as small as possible)</tspan>
+      <tspan x="129" y="336.4"></tspan>
+      <tspan x="129" y="352.4">Name : ENS - N°</tspan>
+      <tspan x="129" y="368.4">(ou ENS est l'ensemble de trabail)</tspan>
+      <tspan x="129" y="384.4">Description de la tâche</tspan>
+      <tspan x="129" y="400.4">ASSIGNEE : &lt;VIDE ICI&gt;</tspan>
+    </text>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="129" y="348.5">
+    <tspan x="129" y="348.5"></tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="284" y="283.5" width="284" height="134"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="284" y="283.5" width="284" height="134"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="426" y="306.4">
+      <tspan x="426" y="306.4">STEP 2 : START WORKING ON IT</tspan>
+      <tspan x="426" y="322.4"></tspan>
+      <tspan x="426" y="338.4">Move it from TO DO to</tspan>
+      <tspan x="426" y="354.4">IN PROGRESS.</tspan>
+      <tspan x="426" y="370.4"></tspan>
+      <tspan x="426" y="386.4">ADD your name to </tspan>
+      <tspan x="426" y="402.4">ASSIGNEE : &lt;YOU&gt;</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="607.9" y="284.7" width="284" height="134"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="607.9" y="284.7" width="284" height="134"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="749.9" y="307.6">
+      <tspan x="749.9" y="307.6">STEP 3 : When your done</tspan>
+      <tspan x="749.9" y="323.6"></tspan>
+      <tspan x="749.9" y="339.6">Open PR on git on </tspan>
+      <tspan x="749.9" y="355.6">ask for code review.</tspan>
+      <tspan x="749.9" y="371.6"></tspan>
+      <tspan x="749.9" y="387.6">Assign your co worker to review </tspan>
+      <tspan x="749.9" y="403.6">ASSIGNEE : &lt;CO WORKER&gt;</tspan>
+    </text>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="749.9" y="351.7">
+    <tspan x="749.9" y="351.7"></tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="609.875" y="452" width="277.25" height="214"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="609.875" y="452" width="277.25" height="214"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="748.5" y="474.9">
+      <tspan x="748.5" y="474.9">STEP 4 : REVIEW</tspan>
+      <tspan x="748.5" y="490.9">CO WORKER test the PR.</tspan>
+      <tspan x="748.5" y="506.9">IF it's good and working nicely</tspan>
+      <tspan x="748.5" y="522.9">Pass it to done and merge</tspan>
+      <tspan x="748.5" y="538.9">in the main branch</tspan>
+      <tspan x="748.5" y="554.9">(ex : If working on the web app</tspan>
+      <tspan x="748.5" y="570.9">merged to web_app main.</tspan>
+      <tspan x="748.5" y="586.9"></tspan>
+      <tspan x="748.5" y="602.9">If test not pass, or code not clean ;)</tspan>
+      <tspan x="748.5" y="618.9">Comment what is wrong </tspan>
+      <tspan x="748.5" y="634.9">Move task back to IN PROGRESS with</tspan>
+      <tspan x="748.5" y="650.9">ASSIGNEE : &lt;WORKER&gt;</tspan>
+    </text>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="609.875" y1="559" x2="429.544" y2="420.227"/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="438.746,421 427.772,418.864 432.648,428.925 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="569.009" y1="351.443" x2="603.428" y2="351.67"/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="595.631,356.619 605.664,351.685 595.697,346.619 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="749.9" y1="418.7" x2="748.688" y2="447.532"/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="744.018,439.565 748.594,449.766 754.01,439.985 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="934.975" y="459" width="265.05" height="214"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="934.975" y="459" width="265.05" height="214"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="1067.5" y="481.9">
+      <tspan x="1067.5" y="481.9">STEP 5+ : WHEN MUCH IN DONE</tspan>
+      <tspan x="1067.5" y="497.9"></tspan>
+      <tspan x="1067.5" y="513.9">Make a new test to see if </tspan>
+      <tspan x="1067.5" y="529.9">all is working well together.</tspan>
+      <tspan x="1067.5" y="545.9"></tspan>
+      <tspan x="1067.5" y="561.9">If yes : DEMO + MERGE INTO MASTER</tspan>
+      <tspan x="1067.5" y="577.9"></tspan>
+      <tspan x="1067.5" y="593.9">If no : </tspan>
+      <tspan x="1067.5" y="609.9">Comment the errors and put back </tspan>
+      <tspan x="1067.5" y="625.9">task to IN PROGRESS</tspan>
+      <tspan x="1067.5" y="641.9">WITHOUT ASSIGNEE</tspan>
+      <tspan x="1067.5" y="657.9">ASSIGNEE : &lt;EMPTY&gt;</tspan>
+    </text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="934.975,673 426,673 426,421.972 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="431,429.736 426,419.736 421,429.736 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="1275" y="351.5" width="210" height="150"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1275" y="351.5" width="210" height="150"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="1380" y="374.4">
+      <tspan x="1380" y="374.4">THEEND :)</tspan>
+      <tspan x="1380" y="390.4"></tspan>
+      <tspan x="1380" y="406.4">Nothing Merge in master</tspan>
+      <tspan x="1380" y="422.4">TO DO if </tspan>
+      <tspan x="1380" y="438.4">All was done well.</tspan>
+      <tspan x="1380" y="454.4"></tspan>
+      <tspan x="1380" y="470.4">Still check ;) we don't know </tspan>
+      <tspan x="1380" y="486.4">what can happen :)</tspan>
+    </text>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="1200.02" y1="566" x2="1272.88" y2="430.439"/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1273.61,439.645 1273.94,428.47 1264.8,434.911 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="253.821" y1="350.111" x2="279.528" y2="350.442"/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="271.7,355.342 281.764,350.471 271.829,345.343 "/>
+  </g>
+</svg>

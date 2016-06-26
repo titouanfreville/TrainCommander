@@ -1,52 +1,212 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8' />
-    <meta name='viewport' content='initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width'>
-    <title>Rail Commander</title>
-    <link rel='icon' href='favicon.ico' />
-    <link rel='icon' type='image/gif' href='favicon.gif' />
+<html lang="fr">
+<head>
+  <title>ReserveTonTrain</title>
+  <meta name="description" content="Bienvenue sur le site de réservation en ligne de votre train">
+  <meta name="keywords" content="ReserveTonTrain, Reserver train, Billet train">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style/RTT.css">
+  <!-- loading Angular Modules -->
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="../bower_components/angular-resource/angular-resource.js"></script>
+  <script src="../bower_components/angular-cookies/angular-cookies.js"></script>
+  <!-- <script src="../js/app.js" /> -->
+  <script src="../js/api-services.js"></script>
+  <script src="../js/controllers.js"></script>
+  <script src="../js/services/users.js"></script>
+</head>
+<body ng-app="rtt">
 
-    <!-- loading CSS -->
-    <link href='./css/stylesheets/style.css' rel='stylesheet'>
 
-    <!--loading JS files -- >
 
-  </head>
-  <body>
-    <header>
-      <div>
-        <div class="logo"></div>
-        <div class="pres">
-          <h1>Rail Commander</h1>
-          <h2>Be sure to catch the right train</h2>
-        </div>
-        <div class="connectic">
-          <div class="not_logged">
-            <span>login</span>
-            <form>
-              <label>
-                <span>Id: </span>
-                <input type="text" name="id" placeholder="Enter your id" required />
-              </label>
-              <label>
-                <span>Password: </span>
-                <input type="password" name="pass" placeholder="Enter your password" required />
-              </label>
-              <div>
-                <input type="submit" class="no_button" value="Log In" />
-                <button><a href="register.html">Register</a></button>
+  <!-- Flooteur Top -->
+
+<div class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <a href="index.html">
+          <img alt="logo-RTT" class='img-responsive' src="style/images/logoo.png" width='1096' height='1015'>
+        </a>
+      </div>
+      <div class="col-sm-9 col-md-8">
+        <nav class="navbar navbar-default" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-left">
+                <li role="presentation"><a href="index.html">Accueil</a></li>
+                <li role="presentation"><a href="reservation.html">Réservez vos billets</a></li>
+              </li>
+              <li role="presentation"><a href="contact.html">A propos</a></li>
+
+               <!-- DEBUT DU LOGIN -->                        
+               <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b><span class="caret"></span></a>
+              <ul id="login-dp" class="dropdown-menu">
+                <li>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div>S'enregistrer avec</div>
+                        <div class="social-buttons">
+                        <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+                        <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
+                        </div>
+                      <div>ou</div>
+                      <form class="form" ng-submit="submit()" ng-controller="LoginController" accept-charset="UTF-8" id="login-nav">
+                        <label class="form-group"> 
+                          <span class="sr-only">E-mail</span>
+                          <input type="email" ng-model="mail" class="form-control" name="mail" placeholder="Adresse E-mail" required />
+                        </label>
+                        <label class="form-group">
+                          <span class="sr-only">Mot de passe</span>
+                          <input type="password" ng-model="password" class="form-control" name="password" placeholder="Le mot de passe ?" required />
+                        </label>  
+                        <input type="submit" id="submit" value="Submit" />
+                        </form>
+                      </form>
+                    </div>
+                    <div class="bottom text-center">Vous êtes nouveau ? <a href="#"><b>Rejoignez-nous</b></a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              </li>
+
+              <!-- FIN LOGIN -->
+
+            </ul>
+            </div>
           </div>
-          <div class="logged">
-            <span>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>   
+
+
+
+<!-- Images central avec texte -->    
+
+<div class="wrapper">
+  <div class='navbar-wrapper'>
+    <div class="presentation">
+      <div class='container'>
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="media-heading">Reserve Ton Train</h1>
+            <div class="space">
+              <div>Simplifiez-vous la vie et réservez votre train sur ReserveTonTrain</div>
+            </div>
           </div>
         </div>
       </div>
-      <nav>
-        <ul>
-          <a href="index.html"><li>Home</li></a>
+    </div>
+  </div>
+</div>
+<div class='container'>
+  <div class="titre"> 
+     <div class='row'>
+    <div class="col-xs-6 col-md-4">
+      <div class="middle">
+        <img class="center-block" src="style/images/profil.png" alt="Profil" height="95">
+      </div>
+      <h4>Profil </h4>
+      <q><a href="profil.html">Accèder à votre profil utilisateur</a></q>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <div class="img-palmares">
+        <img class="center-block" src="style/images/shop.png" alt="Shop" height="95">
+      </div>
+      <h4>Acheter vos billets</h4>
+      <q><a href="reservation.html">Accèder aux réservations</a></q>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <div class="img-palmares">
+        <img class="center-block" src="style/images/parchemin.png" alt="Aide" height="95">
+      </div>
+      <h4>Historique</h4> 
+      <q><a href="historique.html">Accèder à vos historiques</a></q>
+    </div>
+  </div>  
+</div> 
+</div>
+
+
+
+<!-- Flooteur bas -->
+
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <ul class="navig-footer">
+          <li><h5>PLAN DU SITE</h5></li>
+          <li><a href="index.html" aria-controls="ceremonie">Accueil</a></li>
+          <li><a href="reservation.html" aria-controls="ceremonie">Reservation de billet</a></li>
+          <li><a href="contact.html" aria-controls="ceremonie">A propos</a></li>
         </ul>
-      </nav>
-    </header>
-  </body>
-</html>
+      </div>
+      <div class="col-md-3">
+        <ul>
+          <li><h5>INFORMATIONS</h5></li>
+          <li><a href="mentions.html">Règlement</a></li>
+          <li><a href="mentions.html" data-target='#legalTerms'>Mentions légales</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul>
+          <li><h5>A PROPOS DE</h5></li>
+          <li><a href="reservation.html">RéserveTonTrain</a></li>
+          <li><a href="contact.html">Nous contacter</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+       <ul>
+        <li><h5>En partenariat avec :</h5></li>
+        <li>
+          <a target="blank" href="https://www.supinfo.com/fr/"><img src="style/images/supinfoo.png" alt='Supinfo' width='194' height='80' /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+
+  <!-- lien réseaux sociaux -->
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="footerSocialLinks">
+        <span class="facebookButton">
+          <div id="fb-root"></div><script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script><div class="fb-share-button" data-href="" data-send="" data-layout="button_count" data-width="300" data-show-faces="1" data-share="1"></div>
+        </span>
+        <span class="googleplus">
+          <div class="g-plusone" data-size="medium" data-annotation="bubble" data-width="60" data-href=""></div><script type="text/javascript"> window.___gcfg = {lang: 'fr'}; (function() { var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true; po.src = 'https://apis.google.com/js/plusone.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s); })();      </script>
+        </span>
+        <span class="twitterButton"><a href="https://twitter.com/share" class="twitter-share-button" data-text="" data-url="" data-lang="fr" data-via="" data-hashtags="" ></a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </span>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <div class='copyright'>
+      2016 &reg; Reserve Ton Train - Tous droits r&eacute;serv&eacute;s - <a href="mentions.html">Mentions légales</a>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</body>

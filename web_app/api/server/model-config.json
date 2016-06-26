@@ -1,0 +1,59 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "DbUser": {
+    "dataSource": "TrainCommander",
+    "public": true
+  },
+  "Cart": {
+    "dataSource": "TrainCommander",
+    "public": true
+  },
+  "History": {
+    "dataSource": "TrainCommander",
+    "public": true
+  },
+  "Station": {
+    "dataSource": "TrainCommander",
+    "public": true
+  },
+  "Trips": {
+    "dataSource": "TrainCommander",
+    "public": true
+  },
+  "Schedule": {
+    "dataSource": "TrainCommander",
+    "public": true
+  }
+}
